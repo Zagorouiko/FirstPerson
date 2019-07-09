@@ -10,11 +10,10 @@
  * 
  */
 UCLASS()
-class FIRSTPERSON_API APatrollingGuard : public ATP_ThirdPersonCharacter
-{
+class FIRSTPERSON_API APatrollingGuard : public ATP_ThirdPersonCharacter {
 	GENERATED_BODY()
 
 public:
 	UPROPERTY(EditInstanceOnly, Category = "Setup")
-	TArray<AActor*> PatrolPoints;
+		TArray<AActor*> PatrolPoints;
 };

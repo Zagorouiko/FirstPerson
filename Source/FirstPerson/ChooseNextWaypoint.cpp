@@ -15,7 +15,7 @@ EBTNodeResult::Type UChooseNextWaypoint::ExecuteTask(UBehaviorTreeComponent& Own
 
 	auto PatrolPoints = PatrolRoute->GetPatrolPoints();
 	if (PatrolPoints.Num() == 0) {
-		UE_LOG(LogTemp, Warning, TEXT("Missing patrol points"));
+		//UE_LOG(LogTemp, Warning, TEXT("Missing patrol points"));
 		return EBTNodeResult::Failed;
 	}
 
@@ -28,6 +28,6 @@ EBTNodeResult::Type UChooseNextWaypoint::ExecuteTask(UBehaviorTreeComponent& Own
 	auto NextIndex = (Index + 1) % PatrolPoints.Num();
 	BlackboardComp->SetValueAsInt(IndexKey.SelectedKeyName, NextIndex);
 
-	UE_LOG(LogTemp, Warning, TEXT("Index: %i"), Index);
+	//UE_LOG(LogTemp, Warning, TEXT("Index: %i"), Index);
 	return EBTNodeResult::Succeeded;
 }
